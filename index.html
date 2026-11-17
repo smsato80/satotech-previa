@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SatoTech | Sites e sistemas para empresas no Japão — Shizuoka</title>
+<meta name="description" content="A SatoTech desenvolve sites e sistemas de gestão para empresas na região de Shizuoka, no Japão. Demonstrações conceituais, atendimento direto e proposta com escopo e valores fechados.">
+<meta name="theme-color" content="#0F1115">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="SatoTech">
+<meta property="og:title" content="SatoTech | Sites que vendem. Sistemas que organizam.">
+<meta property="og:description" content="Soluções digitais para empresas no Japão: sites, sistemas de gestão e automação de pedidos e agendamentos. Região de Shizuoka.">
+<meta property="og:image" content="assets/header-fiel.png">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --verde:#00A651;
+  --verde-escuro:#0B6B3A;
+  --verde-fundo:#063D20;
+  --grafite:#0F1115;
+  --painel:#15181D;
+  --painel-2:#1A1E24;
+  --borda:#262B33;
+  --claro:#F5F7F9;
+  --suave:#A9B2B8;
+  --raio:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--grafite);
+  color:var(--claro);
+  font-family:'Inter','Noto Sans JP',system-ui,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Montserrat','Noto Sans JP',sans-serif;line-height:1.2}
+:focus-visible{outline:2px solid var(--verde);outline-offset:3px;border-radius:4px}
+::selection{background:var(--verde);color:#fff}
+
+/* ---------- topo ---------- */
+.topo{
+  position:sticky;top:0;z-index:50;
+  background:rgba(15,17,21,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--borda);
+}
+.topo-in{display:flex;align-items:center;gap:22px;min-height:72px}
+.marca{flex:none;line-height:0}
+.logo-topo{height:40px;width:auto}
+.menu{display:flex;gap:24px;margin-left:8px}
+.menu a{
+  text-decoration:none;font-size:14.5px;font-weight:500;color:var(--suave);
+  padding:6px 2px;white-space:nowrap;
+}
+.menu a:hover{color:var(--claro)}
+.topo-acoes{margin-left:auto;display:flex;align-items:center;gap:10px;flex:none}
+.lang-btn{
+  background:transparent;border:1px solid var(--borda);color:var(--claro);
+  font:inherit;font-size:13.5px;font-weight:600;
+  padding:8px 13px;border-radius:9px;cursor:pointer;white-space:nowrap;
+}
+.lang-btn:hover{border-color:var(--verde)}
+.btn{
+  display:inline-block;text-decoration:none;font-weight:600;
+  font-family:'Montserrat','Noto Sans JP',sans-serif;
+  border-radius:11px;padding:14px 26px;font-size:15.5px;
+  transition:transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn-verde{background:var(--verde);color:#fff}
+.btn-verde:hover{background:var(--verde-escuro)}
+.btn-contorno{border:1px solid var(--borda);color:var(--claro);background:rgba(255,255,255,.02)}
+.btn-contorno:hover{border-color:var(--verde)}
+.btn-sm{padding:9px 16px;font-size:14px;border-radius:9px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:64px 0 84px}
+.hero-diag{position:absolute;inset:0;pointer-events:none}
+.hero-in{position:relative;text-align:center}
+.hero-marca{
+  max-width:720px;margin:0 auto 44px;
+  border:1px solid #1E2B23;border-radius:18px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+}
+.hero-marca img{width:100%;height:auto}
+.hero h1{font-size:clamp(32px,5.4vw,54px);font-weight:800;letter-spacing:-.01em;max-width:820px;margin:0 auto}
+.hero-sub{color:var(--suave);font-size:clamp(16px,2.2vw,19px);max-width:680px;margin:22px auto 0}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.hero-nota{margin-top:26px;font-size:14px;color:var(--suave)}
+.hero-nota strong{color:var(--verde);font-weight:600}
+
+/* ---------- seções ---------- */
+.secao{padding:84px 0}
+.secao-alt{background:#12151A;border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.secao-tag{
+  font-family:'Montserrat','Noto Sans JP',sans-serif;font-weight:700;font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--verde);
+  display:flex;align-items:center;gap:10px;
+}
+.secao-tag::before{content:"";width:26px;height:3px;background:var(--verde);border-radius:2px;flex:none}
+.secao h2{font-size:clamp(26px,3.6vw,38px);font-weight:700;margin-top:12px}
+.secao-sub{color:var(--suave);max-width:720px;margin-top:12px}
+.grade{display:grid;gap:20px;margin-top:42px}
+.grade-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grade-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grade-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+.card{
+  background:var(--painel);border:1px solid var(--borda);border-radius:var(--raio);
+  padding:28px 26px;
+}
+.card h3{font-size:19px;font-weight:700;margin-top:18px}
+.card p{color:var(--suave);font-size:15px;margin-top:10px}
+.card ul{list-style:none;margin-top:16px;border-top:1px solid var(--borda);padding-top:14px}
+.card ul li{
+  font-size:14.5px;color:var(--claro);padding:5px 0 5px 22px;position:relative;
+}
+.card ul li::before{
+  content:"";position:absolute;left:0;top:13px;width:9px;height:9px;border-radius:2px;
+  background:var(--verde);
+}
+.icone{
+  width:52px;height:52px;border:1px solid var(--borda);border-radius:13px;
+  display:flex;align-items:center;justify-content:center;background:var(--painel-2);
+}
+.icone svg{width:28px;height:28px}
+
+/* ---------- portfólio ---------- */
+.proj{background:var(--painel);border:1px solid var(--borda);border-radius:var(--raio);overflow:hidden;display:flex;flex-direction:column}
+.proj-faixa{
+  height:96px;display:flex;align-items:center;padding:0 24px;
+  background:
+    repeating-linear-gradient(125deg, rgba(255,255,255,.05) 0 14px, rgba(255,255,255,0) 14px 30px),
+    linear-gradient(120deg, var(--f1), var(--f2));
+}
+.proj-iniciais{
+  font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;letter-spacing:.02em;color:var(--claro);
+}
+.proj-iniciais em{font-style:normal;color:var(--verde)}
+.proj-corpo{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1}
+.proj-corpo h3{font-size:20px;font-weight:700}
+.proj-seg{
+  display:inline-block;margin-top:8px;font-size:12.5px;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--verde);
+}
+.proj-desc{color:var(--suave);font-size:15px;margin-top:12px}
+.proj-func{font-size:14.5px;margin-top:14px;margin-bottom:20px;color:var(--claro)}
+.proj-func strong{color:var(--verde);font-weight:600}
+.proj-selo{
+  margin-top:auto;padding-top:18px;font-size:12px;color:var(--suave);
+  border-top:1px solid var(--borda);
+}
+
+/* ---------- conecta+ ---------- */
+.conecta{position:relative;overflow:hidden}
+.conecta-linhas{position:absolute;inset:0;pointer-events:none;opacity:.5}
+.conecta .wrap{position:relative}
+.conecta .card h3{margin-top:18px}
+
+/* ---------- passos ---------- */
+.passo{background:var(--painel);border:1px solid var(--borda);border-radius:var(--raio);padding:26px 24px}
+.passo-num{
+  font-family:'Montserrat',sans-serif;font-weight:800;font-size:30px;color:var(--verde);line-height:1;
+}
+.passo h3{font-size:17.5px;font-weight:700;margin-top:14px}
+.passo p{color:var(--suave);font-size:14.5px;margin-top:8px}
+
+/* ---------- quem ---------- */
+.quem-card{
+  background:var(--claro);color:#171A1E;border-radius:20px;
+  padding:44px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:center;
+}
+.quem-card .logo-quem{width:min(320px,100%);height:auto}
+.quem-card h2{color:#171A1E;font-size:clamp(24px,3vw,32px)}
+.quem-card p{color:#3C434A;margin-top:12px;font-size:15.5px}
+.quem-card p strong{color:#171A1E}
+.quem-card .secao-tag{color:var(--verde-escuro)}
+.quem-card .secao-tag::before{background:var(--verde-escuro)}
+
+/* ---------- cta final ---------- */
+.cta-final{
+  text-align:center;padding:90px 0;
+  background-image:radial-gradient(circle, rgba(0,166,81,.35) 1.5px, rgba(0,166,81,0) 1.7px);
+  background-size:24px 24px;background-position:center;
+  border-top:1px solid var(--borda);
+}
+.cta-final h2{font-size:clamp(26px,4vw,40px);font-weight:800;max-width:640px;margin:0 auto}
+.cta-final p{color:var(--suave);margin:16px auto 0;max-width:520px}
+.cta-final .btn{margin-top:32px;padding:16px 34px;font-size:16.5px}
+
+/* ---------- rodapé ---------- */
+footer{border-top:1px solid var(--borda);background:#0B0D10;padding:52px 0 34px}
+.rodape-in{display:flex;gap:36px;flex-wrap:wrap;align-items:flex-start}
+.logo-rodape{height:48px;width:auto}
+.rodape-desc{color:var(--suave);font-size:14.5px;max-width:340px;margin-top:16px}
+.rodape-col{margin-left:auto}
+.rodape-col h4{font-family:'Montserrat','Noto Sans JP',sans-serif;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--claro);margin-bottom:12px}
+.rodape-col a{display:block;color:var(--suave);text-decoration:none;font-size:14.5px;padding:4px 0}
+.rodape-col a:hover{color:var(--verde)}
+.rodape-fim{
+  border-top:1px solid var(--borda);margin-top:38px;padding-top:20px;
+  color:var(--suave);font-size:13px;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between;
+}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1020px){
+  .grade-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .menu{display:none}
+  .grade-3{grid-template-columns:minmax(0,1fr)}
+  .grade-2{grid-template-columns:minmax(0,1fr)}
+  .quem-card{grid-template-columns:minmax(0,1fr);padding:32px 26px;gap:26px}
+  .secao{padding:62px 0}
+  .hero{padding:44px 0 62px}
+}
+@media (max-width:560px){
+  .grade-4{grid-template-columns:minmax(0,1fr)}
+  .topo-in{gap:12px;min-height:64px}
+  .logo-topo{height:33px}
+  .topo-acoes .btn{display:none}
+  .hero-ctas .btn{width:100%;text-align:center}
+  .rodape-col{margin-left:0}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#inicio" aria-label="SatoTech">
+      <img class="logo-topo" src="assets/logo-branco.svg" alt="SatoTech — Soluções Inteligentes" width="421" height="100">
+    </a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#servicos" data-i18n="nav_servicos">O que desenvolvemos</a>
+      <a href="#portfolio" data-i18n="nav_portfolio">Portfólio</a>
+      <a href="#conecta" data-i18n="nav_conecta">Conecta+</a>
+      <a href="#como" data-i18n="nav_como">Como funciona</a>
+      <a href="#quem" data-i18n="nav_quem">Quem está por trás</a>
+    </nav>
+    <div class="topo-acoes">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language / 言語切り替え">日本語</button>
+      <a class="btn btn-verde btn-sm wa-link" href="https://wa.me/819064640042" target="_blank" rel="noopener" data-i18n="nav_cta">Conversar no WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="hero-diag" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1440 620" aria-hidden="true">
+      <polygon points="0,0 300,0 120,620 0,620" fill="#0B6B3A" opacity="0.20"/>
+      <polygon points="0,0 190,0 40,620 0,620" fill="#00A651" opacity="0.16"/>
+      <polygon points="1440,0 1180,0 1330,620 1440,620" fill="#0B6B3A" opacity="0.20"/>
+      <polygon points="1440,90 1290,620 1440,620" fill="#00A651" opacity="0.13"/>
+      <polygon points="0,620 420,620 240,620" fill="#063D20" opacity="0.5"/>
+    </svg>
+    <div class="wrap hero-in">
+      <figure class="hero-marca">
+        <img src="assets/header-fiel.png" alt="Logotipo SatoTech — Soluções Inteligentes" width="1069" height="187">
+      </figure>
+      <h1 data-i18n="hero_h1">Sites que vendem. Sistemas que organizam.</h1>
+      <p class="hero-sub" data-i18n="hero_sub">A SatoTech desenvolve soluções digitais para empresas no Japão. Da apresentação do negócio ao controle de clientes, pedidos e operações.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-verde" href="#portfolio" data-i18n="hero_cta1">Explorar demonstrações</a>
+        <a class="btn btn-contorno wa-link" href="https://wa.me/819064640042" target="_blank" rel="noopener" data-i18n="hero_cta2">Conversar sobre meu projeto</a>
+      </div>
+      <p class="hero-nota"><strong data-i18n="hero_nota1">Atendimento direto</strong> <span data-i18n="hero_nota2">com quem desenvolve. Região de Shizuoka.</span></p>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="secao" id="servicos">
+    <div class="wrap">
+      <p class="secao-tag" data-i18n="serv_tag">Serviços</p>
+      <h2 data-i18n="serv_h2">O que desenvolvemos</h2>
+      <p class="secao-sub" data-i18n="serv_sub">Site, sistema e automação pensados para a rotina da sua empresa, sem recurso que você não usa e sem mensalidade de plataforma de fora.</p>
+      <div class="grade grade-3">
+
+        <article class="card">
+          <div class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5F7F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <circle cx="6.2" cy="6.5" r="0.6" fill="#F5F7F9"/>
+              <circle cx="9.4" cy="6.5" r="0.6" fill="#F5F7F9"/>
+              <path d="M15.5 16.5c-1.2-1.8-3.8-1.8-5 0" stroke="#00A651"/>
+              <circle cx="13" cy="13.4" r="1.1" stroke="#00A651"/>
+            </svg>
+          </div>
+          <h3 data-i18n="c1_h">Sites comerciais e vitrines digitais</h3>
+          <p data-i18n="c1_p">Sua empresa apresentada com clareza: serviços, produtos e fotos, com o caminho curto para o cliente chamar você no WhatsApp.</p>
+          <ul>
+            <li data-i18n="c1_i1">Páginas rápidas no celular</li>
+            <li data-i18n="c1_i2">Estoque e catálogo atualizados por você</li>
+            <li data-i18n="c1_i3">Botão de contato em todas as telas</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5F7F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3 3 8l9 5 9-5-9-5z"/>
+              <path d="M3 13l9 5 9-5" stroke="#00A651"/>
+            </svg>
+          </div>
+          <h3 data-i18n="c2_h">Sistemas de gestão e relacionamento com clientes</h3>
+          <p data-i18n="c2_p">Clientes, negociações e tarefas num painel só. Você abre e sabe o que está em andamento, sem depender de caderno ou de memória.</p>
+          <ul>
+            <li data-i18n="c2_i1">Cadastro de clientes e histórico</li>
+            <li data-i18n="c2_i2">Funil de negociações</li>
+            <li data-i18n="c2_i3">Agenda e tarefas da equipe</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5F7F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3.2"/>
+              <path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/>
+              <circle cx="12" cy="12" r="1" fill="#00A651" stroke="none"/>
+            </svg>
+          </div>
+          <h3 data-i18n="c3_h">Pedidos, agendamentos e automação de processos</h3>
+          <p data-i18n="c3_p">O cliente pede ou agenda pelo site e a solicitação chega organizada no seu painel, com aviso na hora para a sua equipe.</p>
+          <ul>
+            <li data-i18n="c3_i1">Pedidos online para entrega ou retirada</li>
+            <li data-i18n="c3_i2">Agendamento de serviços</li>
+            <li data-i18n="c3_i3">Avisos e confirmações automáticas</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section class="secao secao-alt" id="portfolio">
+    <div class="wrap">
+      <p class="secao-tag" data-i18n="port_tag">Portfólio</p>
+      <h2 data-i18n="port_h2">Projetos conceituais</h2>
+      <p class="secao-sub" data-i18n="port_sub">Seis demonstrações criadas com empresas fictícias. Elas mostram, na prática, o que cada tipo de negócio pode ter. Nenhuma usa dados de clientes reais.</p>
+      <div class="grade grade-3">
+
+        <article class="proj">
+          <div class="proj-faixa" style="--f1:#0B6B3A;--f2:#00A651"><span class="proj-iniciais">K<em>M</em></span></div>
+          <div class="proj-corpo">
+            <h3>Kizuna Motors</h3>
+            <span class="proj-seg" data-i18n="k_seg">Revenda de automóveis</span>
+            <p class="proj-desc" data-i18n="k_desc">Vitrine de estoque ligada ao painel de vendas da loja.</p>
+            <p class="proj-func"><strong data-i18n="func_label">Na demonstração:</strong> <span data-i18n="k_func">busca por modelo e faixa de preço, ficha completa de cada carro e funil de negociações no painel.</span></p>
+            <p class="proj-selo" data-i18n="selo">Projeto conceitual — empresa fictícia — demonstração SatoTech</p>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-faixa" style="--f1:#0F1115;--f2:#0B6B3A"><span class="proj-iniciais">V<em>A</em></span></div>
+          <div class="proj-corpo">
+            <h3>Vertex Auto</h3>
+            <span class="proj-seg" data-i18n="v_seg">Loja multimarcas</span>
+            <p class="proj-desc" data-i18n="v_desc">Catálogo com várias marcas e atendimento organizado desde o primeiro contato.</p>
+            <p class="proj-func"><strong data-i18n="func_label">Na demonstração:</strong> <span data-i18n="v_func">simulação de financiamento na ficha do carro e agendamento de visita à loja.</span></p>
+            <p class="proj-selo" data-i18n="selo">Projeto conceitual — empresa fictícia — demonstração SatoTech</p>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-faixa" style="--f1:#063D20;--f2:#0B6B3A"><span class="proj-iniciais">N<em>D</em></span></div>
+          <div class="proj-corpo">
+            <h3>Nova Drive</h3>
+            <span class="proj-seg" data-i18n="n_seg">Revenda de veículos</span>
+            <p class="proj-desc" data-i18n="n_desc">Operação enxuta, pensada para girar o estoque sem perder contato.</p>
+            <p class="proj-func"><strong data-i18n="func_label">Na demonstração:</strong> <span data-i18n="n_func">avaliação do carro usado do cliente para troca e área de seminovos em destaque na vitrine.</span></p>
+            <p class="proj-selo" data-i18n="selo">Projeto conceitual — empresa fictícia — demonstração SatoTech</p>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-faixa" style="--f1:#0B6B3A;--f2:#063D20"><span class="proj-iniciais">F<em>27</em></span></div>
+          <div class="proj-corpo">
+            <h3>Forno 27 Pizza</h3>
+            <span class="proj-seg" data-i18n="f_seg">Pizzaria e delivery</span>
+            <p class="proj-desc" data-i18n="f_desc">Cardápio online com pedido direto para a loja, sem intermediário.</p>
+            <p class="proj-func"><strong data-i18n="func_label">Na demonstração:</strong> <span data-i18n="f_func">pedido para entrega ou retirada e acompanhamento das etapas do pedido na tela da cozinha.</span></p>
+            <p class="proj-selo" data-i18n="selo">Projeto conceitual — empresa fictícia — demonstração SatoTech</p>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-faixa" style="--f1:#0F1115;--f2:#00A651"><span class="proj-iniciais">L<em>B</em></span></div>
+          <div class="proj-corpo">
+            <h3>Lumi Beauty Studio</h3>
+            <span class="proj-seg" data-i18n="l_seg">Estúdio de beleza</span>
+            <p class="proj-desc" data-i18n="l_desc">Agenda e clientes no mesmo lugar, sem caderno de horários.</p>
+            <p class="proj-func"><strong data-i18n="func_label">Na demonstração:</strong> <span data-i18n="l_func">reserva de horários pelo site, ficha de cada cliente e lembrete de retorno.</span></p>
+            <p class="proj-selo" data-i18n="selo">Projeto conceitual — empresa fictícia — demonstração SatoTech</p>
+          </div>
+        </article>
+
+        <article class="proj">
+          <div class="proj-faixa" style="--f1:#063D20;--f2:#0F1115"><span class="proj-iniciais">T<em>G</em></span></div>
+          <div class="proj-corpo">
+            <h3>Takumi Garage</h3>
+            <span class="proj-seg" data-i18n="t_seg">Oficina automotiva</span>
+            <p class="proj-desc" data-i18n="t_desc">Do orçamento à entrega do carro, cada serviço fica registrado.</p>
+            <p class="proj-func"><strong data-i18n="func_label">Na demonstração:</strong> <span data-i18n="t_func">ordem de serviço, aprovação do orçamento pelo cliente e histórico de serviços de cada veículo.</span></p>
+            <p class="proj-selo" data-i18n="selo">Projeto conceitual — empresa fictícia — demonstração SatoTech</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONECTA+ -->
+  <section class="secao conecta" id="conecta">
+    <svg class="conecta-linhas" width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1440 560" aria-hidden="true">
+      <path d="M0,470 C360,330 620,600 980,430 S1360,300 1440,355" fill="none" stroke="#00A651" stroke-width="1.4" opacity="0.35"/>
+      <path d="M0,510 C380,380 660,640 1020,470 S1380,350 1440,405" fill="none" stroke="#00A651" stroke-width="1.2" opacity="0.22"/>
+      <path d="M0,90 C420,180 760,10 1120,110 S1400,185 1440,140" fill="none" stroke="#0B6B3A" stroke-width="1.2" opacity="0.4"/>
+    </svg>
+    <div class="wrap">
+      <p class="secao-tag" data-i18n="con_tag">Plataforma</p>
+      <h2 data-i18n="con_h2">Conheça o Conecta+</h2>
+      <p class="secao-sub" data-i18n="con_sub">É a base dos sistemas que a SatoTech entrega. Duas comparações simples explicam como ele funciona.</p>
+      <div class="grade grade-2">
+
+        <article class="card">
+          <div class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5F7F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="3" width="14" height="18" rx="1.5"/>
+              <path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2" stroke="#00A651"/>
+              <path d="M10.5 21v-2.5h3V21"/>
+            </svg>
+          </div>
+          <h3 data-i18n="predio_h">Um prédio, vários apartamentos</h3>
+          <p data-i18n="predio_p">O Conecta+ é um sistema só, como um prédio. Cada empresa ocupa o seu apartamento: entra com o próprio login e mexe apenas no que é dela. Os dados de uma empresa não aparecem para outra, e a SatoTech cuida da manutenção do prédio inteiro.</p>
+        </article>
+
+        <article class="card">
+          <div class="icone" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F5F7F9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7.5 5.2 3h13.6L20 7.5"/>
+              <path d="M4 7.5a2.4 2.4 0 0 0 4.8 0 2.4 2.4 0 0 0 4.8 0 2.4 2.4 0 0 0 4.8 0A2.4 2.4 0 0 0 20 7.5" stroke="#00A651"/>
+              <path d="M5.5 12.5V21h13v-8.5"/>
+              <path d="M9.5 21v-5h5v5"/>
+            </svg>
+          </div>
+          <h3 data-i18n="shop_h">Como uma loja em shopping</h3>
+          <p data-i18n="shop_p">A mensalidade funciona como o aluguel de uma loja em shopping, junto com as contas do prédio. É esse valor que mantém a estrutura de pé: servidor no ar, segurança, cópias de segurança e suporte quando você precisar.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="secao secao-alt" id="como">
+    <div class="wrap">
+      <p class="secao-tag" data-i18n="como_tag">Processo</p>
+      <h2 data-i18n="como_h2">Como funciona</h2>
+      <div class="grade grade-4">
+        <article class="passo">
+          <p class="passo-num">01</p>
+          <h3 data-i18n="p1_h">Entendemos o negócio</h3>
+          <p data-i18n="p1_p">Uma conversa sobre a sua rotina, os seus clientes e os pontos onde o trabalho trava hoje.</p>
+        </article>
+        <article class="passo">
+          <p class="passo-num">02</p>
+          <h3 data-i18n="p2_h">Planejamos a solução</h3>
+          <p data-i18n="p2_p">Você recebe a proposta com escopo, prazo e valores definidos antes de qualquer começo.</p>
+        </article>
+        <article class="passo">
+          <p class="passo-num">03</p>
+          <h3 data-i18n="p3_h">Desenvolvemos e demonstramos</h3>
+          <p data-i18n="p3_p">O sistema é construído e mostrado funcionando para você, antes de entrar na sua rotina.</p>
+        </article>
+        <article class="passo">
+          <p class="passo-num">04</p>
+          <h3 data-i18n="p4_h">Implantamos e acompanhamos</h3>
+          <p data-i18n="p4_p">Colocamos no ar, explicamos o uso para quem vai operar e seguimos com o suporte.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM -->
+  <section class="secao" id="quem">
+    <div class="wrap">
+      <div class="quem-card">
+        <div>
+          <img class="logo-quem" src="assets/logo-principal.svg" alt="SatoTech — Soluções Inteligentes" width="421" height="100">
+        </div>
+        <div>
+          <p class="secao-tag" data-i18n="quem_tag">Quem está por trás</p>
+          <h2 data-i18n="quem_h2">Atendimento de dono para dono</h2>
+          <p><strong>Minoru Sato, da SatoTech.</strong> <span data-i18n="quem_p1">Quem conversa com você é a mesma pessoa que projeta e desenvolve o seu sistema. Nada de call center e nada de repassar o seu projeto para terceiros.</span></p>
+          <p data-i18n="quem_p2">A SatoTech atende empresas na região de Shizuoka que querem apresentar melhor o negócio e organizar clientes, pedidos e operação num sistema feito para a própria rotina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="wrap">
+      <h2 data-i18n="cta_h2">Como seria um sistema desses na sua empresa?</h2>
+      <p data-i18n="cta_p">Chama no WhatsApp e me conta como é a sua rotina hoje. A conversa é sem compromisso.</p>
+      <a class="btn btn-verde wa-link" href="https://wa.me/819064640042" target="_blank" rel="noopener" data-i18n="cta_btn">Chamar no WhatsApp</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="rodape-in">
+      <div>
+        <img class="logo-rodape" src="assets/logo-branco.svg" alt="SatoTech — Soluções Inteligentes" width="421" height="100">
+        <p class="rodape-desc" data-i18n="foot_desc">Sites e sistemas para empresas na região de Shizuoka, no Japão.</p>
+      </div>
+      <div class="rodape-col">
+        <h4 data-i18n="foot_nav">Navegação</h4>
+        <a href="#servicos" data-i18n="nav_servicos">O que desenvolvemos</a>
+        <a href="#portfolio" data-i18n="nav_portfolio">Portfólio</a>
+        <a href="#conecta" data-i18n="nav_conecta">Conecta+</a>
+        <a href="#como" data-i18n="nav_como">Como funciona</a>
+      </div>
+      <div class="rodape-col">
+        <h4 data-i18n="foot_contato">Contato</h4>
+        <a class="wa-link" href="https://wa.me/819064640042" target="_blank" rel="noopener">WhatsApp: 090-6464-0042</a>
+        <a href="#quem" data-i18n="foot_regiao">Região de atendimento: Shizuoka</a>
+      </div>
+    </div>
+    <div class="rodape-fim">
+      <span data-i18n="foot_copy">© 2026 SatoTech. Todos os direitos reservados.</span>
+      <span data-i18n="foot_note">As demonstrações desta página usam empresas fictícias.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var WA = 'https://wa.me/819064640042';
+  var MSG = {
+    pt: 'Olá, Minoru. Quero conversar sobre um projeto para a minha empresa.',
+    jp: 'こんにちは。佐藤さん、会社のプロジェクトについて相談したいです。'
+  };
+  var T = {
+    pt: {
+      nav_servicos:'O que desenvolvemos', nav_portfolio:'Portfólio', nav_conecta:'Conecta+',
+      nav_como:'Como funciona', nav_quem:'Quem está por trás', nav_cta:'Conversar no WhatsApp',
+      hero_h1:'Sites que vendem. Sistemas que organizam.',
+      hero_sub:'A SatoTech desenvolve soluções digitais para empresas no Japão. Da apresentação do negócio ao controle de clientes, pedidos e operações.',
+      hero_cta1:'Explorar demonstrações', hero_cta2:'Conversar sobre meu projeto',
+      hero_nota1:'Atendimento direto', hero_nota2:'com quem desenvolve. Região de Shizuoka.',
+      serv_tag:'Serviços', serv_h2:'O que desenvolvemos',
+      serv_sub:'Site, sistema e automação pensados para a rotina da sua empresa, sem recurso que você não usa e sem mensalidade de plataforma de fora.',
+      c1_h:'Sites comerciais e vitrines digitais',
+      c1_p:'Sua empresa apresentada com clareza: serviços, produtos e fotos, com o caminho curto para o cliente chamar você no WhatsApp.',
+      c1_i1:'Páginas rápidas no celular', c1_i2:'Estoque e catálogo atualizados por você', c1_i3:'Botão de contato em todas as telas',
+      c2_h:'Sistemas de gestão e relacionamento com clientes',
+      c2_p:'Clientes, negociações e tarefas num painel só. Você abre e sabe o que está em andamento, sem depender de caderno ou de memória.',
+      c2_i1:'Cadastro de clientes e histórico', c2_i2:'Funil de negociações', c2_i3:'Agenda e tarefas da equipe',
+      c3_h:'Pedidos, agendamentos e automação de processos',
+      c3_p:'O cliente pede ou agenda pelo site e a solicitação chega organizada no seu painel, com aviso na hora para a sua equipe.',
+      c3_i1:'Pedidos online para entrega ou retirada', c3_i2:'Agendamento de serviços', c3_i3:'Avisos e confirmações automáticas',
+      port_tag:'Portfólio', port_h2:'Projetos conceituais',
+      port_sub:'Seis demonstrações criadas com empresas fictícias. Elas mostram, na prática, o que cada tipo de negócio pode ter. Nenhuma usa dados de clientes reais.',
+      func_label:'Na demonstração:', selo:'Projeto conceitual — empresa fictícia — demonstração SatoTech',
+      k_seg:'Revenda de automóveis', k_desc:'Vitrine de estoque ligada ao painel de vendas da loja.',
+      k_func:'busca por modelo e faixa de preço, ficha completa de cada carro e funil de negociações no painel.',
+      v_seg:'Loja multimarcas', v_desc:'Catálogo com várias marcas e atendimento organizado desde o primeiro contato.',
+      v_func:'simulação de financiamento na ficha do carro e agendamento de visita à loja.',
+      n_seg:'Revenda de veículos', n_desc:'Operação enxuta, pensada para girar o estoque sem perder contato.',
+      n_func:'avaliação do carro usado do cliente para troca e área de seminovos em destaque na vitrine.',
+      f_seg:'Pizzaria e delivery', f_desc:'Cardápio online com pedido direto para a loja, sem intermediário.',
+      f_func:'pedido para entrega ou retirada e acompanhamento das etapas do pedido na tela da cozinha.',
+      l_seg:'Estúdio de beleza', l_desc:'Agenda e clientes no mesmo lugar, sem caderno de horários.',
+      l_func:'reserva de horários pelo site, ficha de cada cliente e lembrete de retorno.',
+      t_seg:'Oficina automotiva', t_desc:'Do orçamento à entrega do carro, cada serviço fica registrado.',
+      t_func:'ordem de serviço, aprovação do orçamento pelo cliente e histórico de serviços de cada veículo.',
+      con_tag:'Plataforma', con_h2:'Conheça o Conecta+',
+      con_sub:'É a base dos sistemas que a SatoTech entrega. Duas comparações simples explicam como ele funciona.',
+      predio_h:'Um prédio, vários apartamentos',
+      predio_p:'O Conecta+ é um sistema só, como um prédio. Cada empresa ocupa o seu apartamento: entra com o próprio login e mexe apenas no que é dela. Os dados de uma empresa não aparecem para outra, e a SatoTech cuida da manutenção do prédio inteiro.',
+      shop_h:'Como uma loja em shopping',
+      shop_p:'A mensalidade funciona como o aluguel de uma loja em shopping, junto com as contas do prédio. É esse valor que mantém a estrutura de pé: servidor no ar, segurança, cópias de segurança e suporte quando você precisar.',
+      como_tag:'Processo', como_h2:'Como funciona',
+      p1_h:'Entendemos o negócio', p1_p:'Uma conversa sobre a sua rotina, os seus clientes e os pontos onde o trabalho trava hoje.',
+      p2_h:'Planejamos a solução', p2_p:'Você recebe a proposta com escopo, prazo e valores definidos antes de qualquer começo.',
+      p3_h:'Desenvolvemos e demonstramos', p3_p:'O sistema é construído e mostrado funcionando para você, antes de entrar na sua rotina.',
+      p4_h:'Implantamos e acompanhamos', p4_p:'Colocamos no ar, explicamos o uso para quem vai operar e seguimos com o suporte.',
+      quem_tag:'Quem está por trás', quem_h2:'Atendimento de dono para dono',
+      quem_p1:'Quem conversa com você é a mesma pessoa que projeta e desenvolve o seu sistema. Nada de call center e nada de repassar o seu projeto para terceiros.',
+      quem_p2:'A SatoTech atende empresas na região de Shizuoka que querem apresentar melhor o negócio e organizar clientes, pedidos e operação num sistema feito para a própria rotina.',
+      cta_h2:'Como seria um sistema desses na sua empresa?',
+      cta_p:'Chama no WhatsApp e me conta como é a sua rotina hoje. A conversa é sem compromisso.',
+      cta_btn:'Chamar no WhatsApp',
+      foot_desc:'Sites e sistemas para empresas na região de Shizuoka, no Japão.',
+      foot_nav:'Navegação', foot_contato:'Contato', foot_regiao:'Região de atendimento: Shizuoka',
+      foot_copy:'© 2026 SatoTech. Todos os direitos reservados.',
+      foot_note:'As demonstrações desta página usam empresas fictícias.'
+    },
+    jp: {
+      nav_servicos:'サービス内容', nav_portfolio:'コンセプト事例', nav_conecta:'Conecta+',
+      nav_como:'進め方', nav_quem:'代表について', nav_cta:'WhatsAppで相談する',
+      hero_h1:'売れるウェブサイト。業務を整えるシステム。',
+      hero_sub:'SatoTechは、日本の企業のためにデジタルソリューションを開発します。事業の紹介から、顧客・注文・業務の管理までを支えます。',
+      hero_cta1:'デモを見る', hero_cta2:'プロジェクトについて相談する',
+      hero_nota1:'開発者本人が直接対応。', hero_nota2:'静岡県地域で活動しています。',
+      serv_tag:'サービス', serv_h2:'開発内容',
+      serv_sub:'ウェブサイト、管理システム、自動化を、あなたの会社の日常業務に合わせて作ります。使わない機能や、外部プラットフォームの月額料金はありません。',
+      c1_h:'商業サイトとデジタルショーケース',
+      c1_p:'サービス、商品、写真を分かりやすく紹介し、お客様がWhatsAppで連絡するまでの流れを短くします。',
+      c1_i1:'スマートフォンで速く開くページ', c1_i2:'在庫やカタログは自分で更新可能', c1_i3:'どの画面にも連絡ボタン',
+      c2_h:'管理システムと顧客管理',
+      c2_p:'顧客、商談、タスクをひとつの画面に。開けば、いま何が進んでいるかがすぐ分かります。',
+      c2_i1:'顧客情報と対応履歴', c2_i2:'商談の進捗管理', c2_i3:'スケジュールとチームのタスク',
+      c3_h:'注文・予約・業務の自動化',
+      c3_p:'お客様がサイトから注文や予約をすると、内容が整理されて管理画面に届き、その場でスタッフに通知されます。',
+      c3_i1:'配達・持ち帰りのオンライン注文', c3_i2:'サービスの予約受付', c3_i3:'自動の通知と確認連絡',
+      port_tag:'ポートフォリオ', port_h2:'コンセプト事例',
+      port_sub:'架空の企業で作った6つのデモンストレーションです。業種ごとに何ができるかを実際に示します。実在の顧客データは使用していません。',
+      func_label:'デモの内容：', selo:'コンセプト事例 ― 架空の企業 ― SatoTechのデモンストレーション',
+      k_seg:'中古車販売店', k_desc:'在庫の紹介サイトと、お店の販売管理画面がつながっています。',
+      k_func:'モデルや価格帯での検索、各車両の詳細ページ、管理画面での商談の進捗管理。',
+      v_seg:'マルチブランド販売店', v_desc:'複数ブランドを扱うカタログと、最初のお問い合わせからの接客管理。',
+      v_func:'車両ページでのローン試算と、来店予約の受付。',
+      n_seg:'車両販売店', n_desc:'在庫回転を速くするための、軽快な運営に合わせた仕組み。',
+      n_func:'お客様の車の下取り査定と、厳選中古車の特集表示。',
+      f_seg:'ピザ・デリバリー', f_desc:'仲介業者なしで、お店に直接注文できるオンラインメニュー。',
+      f_func:'配達・持ち帰りの注文と、キッチン画面での注文進捗の確認。',
+      l_seg:'ビューティースタジオ', l_desc:'予約と顧客をひとつの場所で管理し、手帳いらずに。',
+      l_func:'サイトからの予約受付、顧客カルテ、次回来店のリマインド。',
+      t_seg:'自動車整備工場', t_desc:'見積もりから納車まで、すべての作業を記録します。',
+      t_func:'作業指示書、お客様による見積もりの承認、車両ごとの整備履歴。',
+      con_tag:'プラットフォーム', con_h2:'Conecta+について',
+      con_sub:'SatoTechのシステムの基盤です。仕組みを2つの身近な例で説明します。',
+      predio_h:'ひとつの建物に、各社の部屋',
+      predio_p:'Conecta+はひとつのシステムで、建物のようなものです。各社は自分の部屋を使い、専用ログインで入って自社のデータだけを扱います。他社の情報が見えることはありません。建物全体の管理はSatoTechが行います。',
+      shop_h:'ショッピングモールの店舗のように',
+      shop_p:'月額料金は、ショッピングモールの店舗の家賃と共益費のようなものです。サーバー、安全対策、バックアップ、サポートという基盤を、この料金で維持します。',
+      como_tag:'進め方', como_h2:'ご依頼の流れ',
+      p1_h:'事業を理解する', p1_p:'日々の業務、お客様、そして今困っている点についてお話を伺います。',
+      p2_h:'ソリューションを設計する', p2_p:'始める前に、範囲・期間・料金を明確にした提案書をお渡しします。',
+      p3_h:'開発してデモで確認', p3_p:'実際に動くシステムを構築し、業務で使う前にご確認いただきます。',
+      p4_h:'導入とサポート', p4_p:'公開し、使う方へ操作方法を説明し、その後もサポートを続けます。',
+      quem_tag:'代表について', quem_h2:'経営者同士の、直接のやり取り',
+      quem_p1:'相談を受ける人と、設計・開発する人は同じです。コールセンターはなく、あなたのプロジェクトを第三者に丸投げすることもありません。',
+      quem_p2:'SatoTechは静岡県地域で、事業の紹介を整え、顧客・注文・業務を自社に合ったシステムで管理したい企業を支援しています。',
+      cta_h2:'あなたの会社なら、どんなシステムになりますか？',
+      cta_p:'WhatsAppで、今の業務の様子を聞かせてください。相談は無料です。',
+      cta_btn:'WhatsAppで相談する',
+      foot_desc:'静岡県地域の企業向けに、ウェブサイトとシステムを開発しています。',
+      foot_nav:'メニュー', foot_contato:'お問い合わせ', foot_regiao:'対応地域：静岡県',
+      foot_copy:'© 2026 SatoTech. All rights reserved.',
+      foot_note:'このページのデモンストレーションは架空の企業を使用しています。'
+    }
+  };
+  var lang = 'pt';
+  var btn = document.getElementById('langBtn');
+  function aplicar(l){
+    lang = l;
+    document.documentElement.lang = (l === 'jp') ? 'ja' : 'pt-BR';
+    var dict = T[l];
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k = el.getAttribute('data-i18n');
+      if (dict[k]) el.textContent = dict[k];
+    });
+    btn.textContent = (l === 'jp') ? 'Português' : '日本語';
+    document.querySelectorAll('.wa-link').forEach(function(a){
+      a.href = WA + '?text=' + encodeURIComponent(MSG[l]);
+    });
+  }
+  btn.addEventListener('click', function(){ aplicar(lang === 'pt' ? 'jp' : 'pt'); });
+  aplicar('pt');
+})();
+</script>
+</body>
+</html>
