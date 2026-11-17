@@ -5,14 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>(function(){try{var t=localStorage.getItem('satotech-tema');if(t==='claro')document.documentElement.setAttribute('data-tema','claro');}catch(e){}})();</script>
 <title>SatoTech | Soluções digitais para negócios em todo o Japão</title>
-<meta name="description" content="Soluções digitais para negócios em todo o Japão. Sites profissionais, sistemas de gestão e automação sob medida, com atendimento online em todo o Japão.">
+<meta name="description" id="metaDesc" content="Soluções digitais para negócios em todo o Japão. Sites profissionais, sistemas de gestão e automação sob medida, com atendimento online em todo o Japão.">
 <meta name="theme-color" content="#0F1115">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="SatoTech">
-<meta property="og:title" content="SatoTech | Seu negócio merece mais do que um site bonito.">
-<meta property="og:description" content="Da criação do site à organização das operações, desenvolvemos soluções digitais sob medida, com atendimento online em todo o Japão.">
-<meta property="og:image" content="assets/header-fiel.png">
+<meta property="og:title" id="ogTitle" content="SatoTech | Seu negócio merece mais do que um site bonito.">
+<meta property="og:description" id="ogDesc" content="Da criação do site à organização das operações, desenvolvemos soluções digitais sob medida, com atendimento online em todo o Japão.">
+<meta property="og:url" content="https://smsato80.github.io/satotech/">
+<meta property="og:image" content="https://smsato80.github.io/satotech/assets/header-fiel.png">
+<link rel="alternate" hreflang="pt-BR" href="https://smsato80.github.io/satotech/">
+<link rel="alternate" hreflang="ja" href="https://smsato80.github.io/satotech/?lang=jp">
+<link rel="alternate" hreflang="en" href="https://smsato80.github.io/satotech/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://smsato80.github.io/satotech/">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_16.png">
@@ -43,7 +48,7 @@ a{color:inherit}
 .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
 h1,h2,h3{font-family:'Montserrat','Noto Sans JP',sans-serif;line-height:1.2}
 :focus-visible{outline:2px solid var(--verde);outline-offset:3px;border-radius:4px}
-::selection{background:var(--verde);color:#fff}
+::selection{background:var(--verde-escuro);color:#fff}
 .topo{position:sticky;top:0;z-index:50;background:rgba(15,17,21,.94);border-bottom:1px solid var(--borda);transition:box-shadow .3s ease}
 .topo.rolado{box-shadow:0 10px 30px rgba(0,0,0,.45)}
 .menu a{position:relative;transition:color .25s ease}
@@ -70,8 +75,8 @@ h1,h2,h3{font-family:'Montserrat','Noto Sans JP',sans-serif;line-height:1.2}
 .lang-btn:hover{border-color:var(--verde)}
 .btn{display:inline-block;text-decoration:none;font-weight:600;font-family:'Montserrat','Noto Sans JP',sans-serif;border-radius:11px;padding:14px 26px;font-size:15.5px;transition:transform .15s ease, background .15s ease, border-color .15s ease}
 .btn:active{transform:scale(.98)}
-.btn-verde{background:var(--verde);color:#fff}
-.btn-verde:hover{background:var(--verde-escuro)}
+.btn-verde{background:var(--verde-escuro);color:#fff}
+.btn-verde:hover{background:var(--verde-fundo)}
 .btn-contorno{border:1px solid var(--borda);color:var(--claro);background:rgba(255,255,255,.02)}
 .btn-contorno:hover{border-color:var(--verde)}
 .btn-sm{padding:9px 16px;font-size:14px;border-radius:9px}
@@ -243,6 +248,34 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
   .topo-acoes a.wa-mobile{padding:8px 9px;font-size:12.5px}
   .burger{width:34px;height:34px}
 }
+
+/* ---------- auditoria corretiva 17/11: contraste AA no tema claro ---------- */
+html[data-tema="claro"] .secao-tag{color:var(--verde-escuro)}
+html[data-tema="claro"] .secao-tag::before{background:var(--verde-escuro)}
+html[data-tema="claro"] .quem-card .secao-tag{color:var(--verde-escuro)}
+html[data-tema="claro"] .serv-cta{color:var(--verde-escuro)}
+html[data-tema="claro"] .hero-nota strong{color:var(--verde-escuro)}
+html[data-tema="claro"] .fluxo-seta{color:var(--verde-escuro)}
+html[data-tema="claro"] .etapas .passo-num{color:var(--verde-escuro)}
+html[data-tema="claro"] .rodape-col a:not(.btn):hover{color:var(--verde-escuro)}
+html[data-tema="claro"] .insta-link:hover{color:var(--verde-escuro)}
+html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
+/* alternar tema tambem pelo menu mobile */
+.menu-mobile .tema-menu{display:block;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--borda);color:var(--suave);font:inherit;font-size:15px;font-weight:500;padding:12px 4px;cursor:pointer}
+.menu-mobile .tema-menu:hover,.menu-mobile .tema-menu:focus-visible{color:var(--claro)}
+/* link do Instagram no rodape */
+.insta-link{display:inline-flex;align-items:center;gap:8px;color:var(--suave);text-decoration:none;font-size:14.5px;margin-top:14px}
+.insta-link svg{width:18px;height:18px;flex:none}
+.insta-link:hover{color:var(--verde)}
+/* 320px: o botao de tema sai do topo e fica no menu (sem corte nem rolagem) */
+@media (max-width:359px){
+  .topo-acoes .tema-btn{display:none}
+  .topo-acoes{gap:4px}
+  .logo-topo{height:19px}
+  .lang-btn{font-size:11px;padding:5px 6px}
+  .wa-mobile{font-size:11.5px;padding:7px 8px}
+  .burger{width:32px;height:32px}
+}
 </style>
 </head>
 <body>
@@ -277,6 +310,7 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
     <a href="#como" data-i18n="nav_como">Como trabalhamos</a>
     <a href="#quem" data-i18n="nav_quem">Quem está por trás</a>
     <a href="#contato" data-i18n="nav_contato">Contato</a>
+    <button class="tema-menu" id="temaMenuBtn" type="button" data-i18n="menu_tema">Alternar tema claro/escuro</button>
   </nav>
 </header>
 
@@ -467,6 +501,7 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
         <img class="logo-rodape logo-so-escuro" src="assets/logo-branco.svg" alt="SatoTech, Soluções Inteligentes" width="421" height="100">
         <img class="logo-rodape logo-so-claro" src="assets/logo-principal.svg" alt="SatoTech, Soluções Inteligentes">
         <p class="rodape-desc" data-i18n="foot_desc">Soluções digitais para negócios em todo o Japão. Webサイト制作から業務管理システム、業務自動化まで対応します。</p>
+        <a class="insta-link" href="https://www.instagram.com/satotech.jp/" target="_blank" rel="noopener" aria-label="Instagram da SatoTech: @satotech.jp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><span data-i18n="foot_insta">@satotech.jp no Instagram</span></a>
       </div>
       <div class="rodape-col">
         <h4 data-i18n="foot_nav">Navegação</h4>
@@ -549,16 +584,17 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
       cta_h2:'Qual parte do seu negócio poderia funcionar melhor?',
       cta_p:'Conte o que você precisa organizar, automatizar ou melhorar. Vamos avaliar uma solução para sua empresa.',
       cta_btn:'Conversar sobre meu projeto',
-      foot_desc:'Soluções digitais para negócios em todo o Japão. Webサイト制作から業務管理システム、業務自動化まで対応します。',
+      foot_desc:'Soluções digitais para negócios em todo o Japão. Sites profissionais, sistemas de gestão e automação empresarial, com atendimento online.',
       foot_nav:'Navegação', foot_contato:'Contato', foot_wa:'Conversar no WhatsApp', foot_area:'Atendimento online em todo o Japão',
-      foot_copy:'© 2026 SatoTech. Todos os direitos reservados.', foot_slogan:'SatoTech, Soluções Inteligentes'
+      foot_copy:'© 2026 SatoTech. Todos os direitos reservados.', foot_slogan:'SatoTech, Soluções Inteligentes',
+      aria_abrir:'Abrir menu', aria_fechar:'Fechar menu', aria_tema_claro:'Mudar para o tema claro', aria_tema_escuro:'Mudar para o tema escuro', aria_idioma:'Mudar idioma', menu_tema:'Alternar tema claro/escuro', foot_insta:'@satotech.jp no Instagram'
     },
     jp: {
       nav_problema:'課題', nav_solucoes:'ソリューション', nav_conecta:'Conecta+',
       nav_como:'進め方', nav_quem:'代表について', nav_cta:'プロジェクトについて相談する', nav_contato:'お問い合わせ',
       cta_site:'プロフェッショナルなサイトがほしい', cta_gestao:'会社を整理したい', cta_auto:'業務を自動化したい',
       fl1_h:'訪問者', fl1_p:'サイトであなたの会社を見つけます', fl2_h:'お問い合わせ', fl2_p:'サイトから注文、予約、質問を送ります',
-      fl3_h:'Conecta+', fl3_p:'管理画面で受け取り、整理します', fl4_h:'整理された対応', fl4_p:'進み具合を追いながら対応します',
+      fl3_h:'Conecta+', fl3_p:'管理画面で受け取り、整理します', fl4_h:'整理された対応', fl4_p:'対応状況をステータスで確認できます',
       fl_nota:'サイトとシステムの連動を示す、イラストによる流れの例です。',
       hero_h1:'あなたのビジネスには、見た目だけのサイト以上の価値があります。',
       hero_q:'お客様があなたの会社を見つけ、サービスに興味を持ち、連絡したいと思ったとき、その後はどうなりますか。',
@@ -577,7 +613,7 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
       c2_h:'業務管理システム', c2_p:'顧客、お問い合わせ、予約、業務の流れをひとつの画面にまとめ、進み具合を確認できます。',
       c2_i1:'顧客情報と対応履歴', c2_i2:'段階ごとに整理されたお問い合わせ', c2_i3:'予約と日々のタスク',
       c3_h:'業務自動化', c3_p:'繰り返しの作業と二重入力を減らします。ツール同士の連携は、技術的に可能な場合にご提案します。',
-      c3_i1:'意味のある場所での自動通知と記録', c3_i2:'連携は案件ごとに確認', c3_i3:'テストなしに本番へは入れません',
+      c3_i1:'必要な場面での自動通知と記録', c3_i2:'連携は案件ごとに確認', c3_i3:'テストなしに本番へは入れません',
       con_tag:'テクノロジー', con_h2:'Conecta+',
       con_sub:'SatoTechの管理システムで使うプラットフォームです。サイトがお客様を受け付け、Conecta+がその後の流れを整理します。',
       predio_h:'ひとつの建物に、各社の部屋',
@@ -587,7 +623,7 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
       como_tag:'進め方', como_h2:'4つのステップ、驚きなしで',
       p1_h:'事業を理解する', p1_p:'日々の業務、お客様、今困っている点についてお話を伺います。',
       p2_h:'ソリューションを設計する', p2_p:'始める前に、範囲、期間、料金を明確にした提案をお渡しします。',
-      p3_h:'開発してデモで確認', p3_p:'業務で使う前に、実際に動くところをご確認いただきます。',
+      p3_h:'開発し、デモで確認', p3_p:'業務で使う前に、実際に動くところをご確認いただきます。',
       p4_h:'導入とサポート', p4_p:'公開し、使う方へ操作方法を説明し、その後も伴走します。',
       quem_tag:'代表について', quem_h2:'Minoru Sato、SatoTech代表。',
       quem_p1:'相談を受ける人と、設計と開発をする人は同じです。コールセンターはなく、あなたのプロジェクトを第三者に丸投げすることもありません。',
@@ -597,29 +633,30 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
       cta_btn:'プロジェクトについて相談する',
       foot_desc:'日本全国のビジネス向けデジタルソリューション。Webサイト制作から業務管理システム、業務自動化まで対応します。',
       foot_nav:'メニュー', foot_contato:'お問い合わせ', foot_wa:'WhatsAppで相談する', foot_area:'日本全国オンライン対応',
-      foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech、ソリューションズ インテリジェンテス'
+      foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech, Soluções Inteligentes',
+      aria_abrir:'メニューを開く', aria_fechar:'メニューを閉じる', aria_tema_claro:'ライトテーマに切り替える', aria_tema_escuro:'ダークテーマに切り替える', aria_idioma:'言語を切り替える', menu_tema:'テーマ（明/暗）を切り替える', foot_insta:'Instagramの@satotech.jp'
     }    ,
     en: {
       nav_problema:'The problem', nav_solucoes:'Our solutions', nav_conecta:'Conecta+',
-      nav_como:'How we work', nav_quem:'Who is behind it', nav_cta:'Talk about my project', nav_contato:'Contact',
+      nav_como:'How we work', nav_quem:'About the founder', nav_cta:'Talk about my project', nav_contato:'Contact',
       cta_site:'I want a professional website', cta_gestao:'I need to organize my business', cta_auto:'I want to automate my processes',
       fl1_h:'Visitor', fl1_p:'Finds your company on the website', fl2_h:'Request', fl2_p:'Orders, books or asks through the website',
       fl3_h:'Conecta+', fl3_p:'Receives and organizes it in the panel', fl4_h:'Organized follow-up', fl4_p:'Your team tracks each case by status',
       fl_nota:'Illustrative flow of how the website and the system work together.',
       hero_h1:'Your business deserves more than a pretty website.',
-      hero_q:'A customer finds your company, gets interested in your service and wants to get in touch. What happens next?',
+      hero_q:'A customer finds your company, likes what they see and wants to get in touch. What happens next?',
       hero_sub:'SatoTech builds websites and systems that make follow-up easier, organize requests and help you track every opportunity.',
       hero_cta1:'See our solutions', hero_cta2:'Talk about my project',
       hero_nota1:'Digital solutions for businesses across Japan.', hero_nota2:'Online service across Japan.',
       prob_tag:'The problem', prob_h2:'Where work gets lost in the day to day',
       prob_sub:'It is not a lack of customers. It is often what happens after they reach out.',
-      pr1_h:'Scattered follow-up', pr1_p:'A WhatsApp message, a phone call, a note on paper. With no single place to track it all, a request goes unanswered and the customer gives up.',
+      pr1_h:'Customer messages everywhere', pr1_p:'A WhatsApp message, a phone call, a note on paper. With no single place to track it all, a request goes unanswered and the customer gives up.',
       pr2_h:'Requests with no status', pr2_p:'You cannot tell from memory what has been answered, what is in progress and what is still pending. Checking everything takes time from the people who should be serving customers.',
       pr3_h:'Weak digital presence', pr3_p:'Someone who looks up your company and cannot find your services, prices or a clear way to reach you moves on to the next one.',
       serv_tag:'Our solutions', serv_h2:'What SatoTech builds',
       serv_sub:'From building your website to organizing your operations, we develop tailored digital solutions, with online service across Japan.',
       c1_h:'Professional websites', c1_p:'A clear digital presence: what your company does, who it is for and how to get in touch.',
-      c1_i1:'Showcases and service pages', c1_i2:'Fast pages on mobile', c1_i3:'Lead capture with a short path',
+      c1_i1:'Showcases and service pages', c1_i2:'Fast pages on mobile', c1_i3:'A short path from visit to contact',
       c2_h:'Management systems', c2_p:'Customers, requests, bookings and business processes in a single panel, with a status you can follow.',
       c2_i1:'Customers and service history', c2_i2:'Requests organized by stage', c2_i3:'Bookings and routine tasks',
       c3_h:'Business automation', c3_p:'Less repetitive work and less duplicate typing, with integration between tools when technically feasible.',
@@ -635,7 +672,7 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
       p2_h:'We plan the solution', p2_p:'A proposal with scope, timeline and prices defined before we start.',
       p3_h:'We build it and show it working', p3_p:'You see the solution working before it becomes part of your routine.',
       p4_h:'We launch and stay with you', p4_p:'We put it live, explain how to use it to whoever will operate it, and keep following along.',
-      quem_tag:'Who is behind it', quem_h2:'Minoru Sato, of SatoTech.',
+      quem_tag:'About the founder', quem_h2:'Minoru Sato, of SatoTech.',
       quem_p1:'The person you talk to is the same person who designs and builds your solution. Direct contact, no call center and no handing your project off to third parties.',
       quem_p2:'I work with companies and business owners across Japan, fully online. The solution is designed for the real routine of someone who serves, sells and operates at the same time.',
       cta_h2:'Which part of your business could work better?',
@@ -643,7 +680,8 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
       cta_btn:'Talk about my project',
       foot_desc:'Digital solutions for businesses across Japan. Website development, management systems and business automation.',
       foot_nav:'Navigation', foot_contato:'Contact', foot_wa:'Chat on WhatsApp', foot_area:'Online service across Japan',
-      foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech, Intelligent Solutions'
+      foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech, Soluções Inteligentes',
+      aria_abrir:'Open menu', aria_fechar:'Close menu', aria_tema_claro:'Switch to light theme', aria_tema_escuro:'Switch to dark theme', aria_idioma:'Change language', menu_tema:'Toggle light/dark theme', foot_insta:'@satotech.jp on Instagram'
     }
   };
   var ORDEM = ['pt','jp','en'];
@@ -653,6 +691,17 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
     pt:'SatoTech | Soluções digitais para negócios em todo o Japão',
     jp:'SatoTech | 日本全国のビジネス向けデジタルソリューション',
     en:'SatoTech | Digital solutions for businesses across Japan'
+  };
+  var META = {
+    pt: { desc:'Soluções digitais para negócios em todo o Japão. Sites profissionais, sistemas de gestão e automação sob medida, com atendimento online em todo o Japão.',
+          ogt:'SatoTech | Seu negócio merece mais do que um site bonito.',
+          ogd:'Da criação do site à organização das operações, desenvolvemos soluções digitais sob medida, com atendimento online em todo o Japão.' },
+    jp: { desc:'日本全国のビジネス向けデジタルソリューション。Webサイト制作、業務管理システム、業務自動化まで、オンラインで対応します。',
+          ogt:'SatoTech | あなたのビジネスには、見た目だけのサイト以上の価値があります。',
+          ogd:'Webサイト制作から業務管理まで、お客様のビジネスに合わせたデジタルソリューションを日本全国オンラインでご提供します。' },
+    en: { desc:'Digital solutions for businesses across Japan. Professional websites, management systems and business automation, with online service nationwide.',
+          ogt:'SatoTech | Your business deserves more than a pretty website.',
+          ogd:'From your website to your daily operations, we build tailored digital solutions, with online service across Japan.' }
   };
   var lang = 'pt';
   var btn = document.getElementById('langBtn');
@@ -667,6 +716,12 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
       if (dict[k]) el.textContent = dict[k];
     });
     btn.textContent = ROTULO[l];
+    btn.setAttribute('aria-label', dict.aria_idioma);
+    var md = document.getElementById('metaDesc'); if (md) md.setAttribute('content', META[l].desc);
+    var ot = document.getElementById('ogTitle'); if (ot) ot.setAttribute('content', META[l].ogt);
+    var od = document.getElementById('ogDesc'); if (od) od.setAttribute('content', META[l].ogd);
+    if (typeof rotuloMenu === 'function') rotuloMenu();
+    if (typeof aplicarTema === 'function') aplicarTema();
     document.querySelectorAll('.wa-link').forEach(function(a){
       var chave = a.getAttribute('data-wa') || 'geral';
       a.href = WA + '?text=' + encodeURIComponent(MSG[l][chave] || MSG[l].geral);
@@ -677,34 +732,47 @@ html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
   });
   var salvo = 'pt';
   try { salvo = localStorage.getItem('satotech-lang') || 'pt'; } catch(e) {}
+  var qlang = null;
+  try { qlang = new URLSearchParams(location.search).get('lang'); } catch(e) {}
+  if (qlang && T[qlang]) salvo = qlang;
   aplicar(T[salvo] ? salvo : 'pt');
 
   /* tema claro/escuro (variante do kit), com preferencia salva */
   var temaBtn = document.getElementById('temaBtn');
   var metaTema = document.querySelector('meta[name="theme-color"]');
   function aplicarTema(){
+    if (!temaBtn) return;
     var claro = document.documentElement.getAttribute('data-tema') === 'claro';
-    temaBtn.setAttribute('aria-label', claro ? 'Mudar para o tema escuro' : 'Mudar para o tema claro');
+    temaBtn.setAttribute('aria-label', claro ? T[lang].aria_tema_escuro : T[lang].aria_tema_claro);
     if (metaTema) metaTema.setAttribute('content', claro ? '#F5F7F9' : '#0F1115');
   }
-  temaBtn.addEventListener('click', function(){
+  function alternarTema(){
     var claro = document.documentElement.getAttribute('data-tema') === 'claro';
     if (claro) { document.documentElement.removeAttribute('data-tema'); }
     else { document.documentElement.setAttribute('data-tema','claro'); }
     try { localStorage.setItem('satotech-tema', claro ? 'escuro' : 'claro'); } catch(e) {}
     aplicarTema();
-  });
+  }
+  temaBtn.addEventListener('click', alternarTema);
+  var temaMenuBtn = document.getElementById('temaMenuBtn');
+  if (temaMenuBtn) temaMenuBtn.addEventListener('click', alternarTema);
   aplicarTema();
 
   /* menu mobile */
   var burger = document.getElementById('burgerBtn');
   var menuM = document.getElementById('menuMobile');
-  function fecharMenu(){ menuM.classList.remove('aberto'); burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Abrir menu'); }
+  function rotuloMenu(){
+    if (!burger || !menuM) return;
+    var aberto = menuM.classList.contains('aberto');
+    burger.setAttribute('aria-label', aberto ? T[lang].aria_fechar : T[lang].aria_abrir);
+  }
+  function fecharMenu(){ menuM.classList.remove('aberto'); burger.setAttribute('aria-expanded','false'); rotuloMenu(); }
   burger.addEventListener('click', function(){
     var aberto = menuM.classList.toggle('aberto');
     burger.setAttribute('aria-expanded', aberto ? 'true' : 'false');
-    burger.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    rotuloMenu();
   });
+  rotuloMenu();
   menuM.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', fecharMenu); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && menuM.classList.contains('aberto')) { fecharMenu(); burger.focus(); } });
 
