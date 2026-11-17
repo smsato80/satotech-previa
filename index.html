@@ -13,7 +13,25 @@
 <meta property="og:title" id="ogTitle" content="SatoTech | Seu negócio merece mais do que um site bonito.">
 <meta property="og:description" id="ogDesc" content="Da criação do site à organização das operações, desenvolvemos soluções digitais sob medida, com atendimento online em todo o Japão.">
 <meta property="og:url" content="https://smsato80.github.io/satotech/">
-<meta property="og:image" content="https://smsato80.github.io/satotech/assets/header-fiel.png">
+<meta property="og:image" content="https://smsato80.github.io/satotech/assets/og-share.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" id="twTitle" content="SatoTech | Seu negócio merece mais do que um site bonito.">
+<meta name="twitter:description" id="twDesc" content="Da criação do site à organização das operações, desenvolvemos soluções digitais sob medida, com atendimento online em todo o Japão.">
+<meta name="twitter:image" content="https://smsato80.github.io/satotech/assets/og-share.png">
+<link rel="canonical" href="https://smsato80.github.io/satotech/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "SatoTech",
+  "slogan": "Soluções Inteligentes",
+  "url": "https://smsato80.github.io/satotech/",
+  "email": "satotech.jp@gmail.com",
+  "founder": { "@type": "Person", "name": "Minoru Sato" },
+  "areaServed": { "@type": "Country", "name": "Japan" },
+  "sameAs": ["https://www.instagram.com/satotech.jp/"]
+}
+</script>
 <link rel="alternate" hreflang="pt-BR" href="https://smsato80.github.io/satotech/">
 <link rel="alternate" hreflang="ja" href="https://smsato80.github.io/satotech/?lang=jp">
 <link rel="alternate" hreflang="en" href="https://smsato80.github.io/satotech/?lang=en">
@@ -276,6 +294,20 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
   .wa-mobile{font-size:11.5px;padding:7px 8px}
   .burger{width:32px;height:32px}
 }
+
+/* ---------- pacote compativel 17/11: FAQ, e-mail, privacidade ---------- */
+.cta-mail{margin-top:20px;color:var(--suave);font-size:15.5px}
+.cta-mail a{color:var(--verde);font-weight:600;text-decoration:none}
+.cta-mail a:hover{text-decoration:underline}
+html[data-tema="claro"] .cta-mail a{color:var(--verde-escuro)}
+.faq-lista{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:960px}
+@media (max-width:760px){.faq-lista{grid-template-columns:1fr}}
+.faq-lista details{background:var(--painel);border:1px solid var(--borda);border-radius:14px;padding:16px 18px}
+.faq-lista summary{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15.5px;cursor:pointer;color:var(--claro)}
+.faq-lista details p{color:var(--suave);font-size:14.5px;margin-top:10px}
+.rodape-fim a{color:var(--suave);text-decoration:none}
+.rodape-fim a:hover{color:var(--verde)}
+html[data-tema="claro"] .rodape-fim a:hover{color:var(--verde-escuro)}
 </style>
 </head>
 <body>
@@ -484,11 +516,27 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
     </div>
   </section>
 
+  <section class="secao" id="faq">
+    <div class="wrap">
+      <p class="secao-tag reveal" data-i18n="faq_tag">Perguntas frequentes</p>
+      <h2 class="reveal" data-i18n="faq_h2">Antes de conversar com a gente</h2>
+      <div class="faq-lista">
+        <details class="reveal"><summary data-i18n="faq_q1">Quanto custa?</summary><p data-i18n="faq_a1">Depende do que a sua empresa precisa. Antes de começar, você recebe uma proposta com escopo, prazo e valores definidos. Nada é cobrado sem a sua aprovação.</p></details>
+        <details class="reveal"><summary data-i18n="faq_q2">Quanto tempo leva?</summary><p data-i18n="faq_a2">O prazo é definido na proposta, conforme o tamanho do projeto. Você acompanha cada etapa e vê a solução funcionando antes da implantação.</p></details>
+        <details class="reveal"><summary data-i18n="faq_q3">O site é meu?</summary><p data-i18n="faq_a3">Sim. O site, o domínio e o conteúdo são da sua empresa. A SatoTech desenvolve, implanta e cuida da parte técnica para você.</p></details>
+        <details class="reveal"><summary data-i18n="faq_q4">Existe mensalidade?</summary><p data-i18n="faq_a4">Os projetos têm um valor de implantação e um plano mensal de manutenção e acompanhamento, sempre definidos antes na proposta, sem surpresa.</p></details>
+        <details class="reveal"><summary data-i18n="faq_q5">O suporte é em português?</summary><p data-i18n="faq_a5">Sim. O atendimento é direto, em português, com a mesma pessoa que desenvolve a sua solução. E, quando necessário, também em japonês.</p></details>
+        <details class="reveal"><summary data-i18n="faq_q6">Vocês emitem recibo?</summary><p data-i18n="faq_a6">Sim. Você recebe contrato e recibo de cada pagamento, tudo registrado.</p></details>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-final" id="contato">
     <div class="wrap">
       <h2 data-i18n="cta_h2">Qual parte do seu negócio poderia funcionar melhor?</h2>
       <p data-i18n="cta_p">Conte o que você precisa organizar, automatizar ou melhorar. Vamos avaliar uma solução para sua empresa.</p>
       <a class="btn btn-verde wa-link" href="https://wa.me/819064640042" target="_blank" rel="noopener" data-i18n="cta_btn">Conversar sobre meu projeto</a>
+      <p class="cta-mail"><span data-i18n="cta_mail">Prefere e-mail?</span> <a href="mailto:satotech.jp@gmail.com">satotech.jp@gmail.com</a></p>
     </div>
   </section>
 
@@ -502,6 +550,7 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
         <img class="logo-rodape logo-so-claro" src="assets/logo-principal.svg" alt="SatoTech, Soluções Inteligentes">
         <p class="rodape-desc" data-i18n="foot_desc">Soluções digitais para negócios em todo o Japão. Webサイト制作から業務管理システム、業務自動化まで対応します。</p>
         <a class="insta-link" href="https://www.instagram.com/satotech.jp/" target="_blank" rel="noopener" aria-label="Instagram da SatoTech: @satotech.jp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><span data-i18n="foot_insta">@satotech.jp no Instagram</span></a>
+        <a class="insta-link" href="mailto:satotech.jp@gmail.com" aria-label="E-mail da SatoTech: satotech.jp@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>satotech.jp@gmail.com</span></a>
       </div>
       <div class="rodape-col">
         <h4 data-i18n="foot_nav">Navegação</h4>
@@ -509,6 +558,7 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
         <a href="#solucoes" data-i18n="nav_solucoes">Nossas soluções</a>
         <a href="#conecta" data-i18n="nav_conecta">Conecta+</a>
         <a href="#como" data-i18n="nav_como">Como trabalhamos</a>
+        <a href="#faq" data-i18n="nav_faq">Perguntas frequentes</a>
       </div>
       <div class="rodape-col">
         <h4 data-i18n="foot_contato">Contato</h4>
@@ -519,6 +569,7 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
     <div class="rodape-fim">
       <span data-i18n="foot_copy">© 2026 SatoTech. Todos os direitos reservados.</span>
       <span data-i18n="foot_slogan">SatoTech, Soluções Inteligentes</span>
+      <a href="privacidade.html" data-i18n="foot_priv">Política de Privacidade</a>
     </div>
   </div>
 </footer>
@@ -567,7 +618,7 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
       c2_i1:'Clientes e histórico de atendimento', c2_i2:'Solicitações organizadas por etapa', c2_i3:'Agendamentos e tarefas da rotina',
       c3_h:'Automação empresarial', c3_p:'Menos tarefa repetida e menos digitação duplicada, com integração entre ferramentas quando for tecnicamente viável.',
       c3_i1:'Avisos e registros automáticos onde fazem sentido', c3_i2:'Integração avaliada caso a caso', c3_i3:'Nada entra sem ser testado antes',
-      con_tag:'Tecnologia', con_h2:'Conecta+',
+      con_tag:'Tecnologia', con_h2:'Painel de solicitações (Conecta+)',
       con_sub:'É a plataforma que a SatoTech usa nos sistemas de gestão que desenvolve. O site recebe o cliente. O Conecta+ organiza o que acontece depois.',
       predio_h:'Um prédio, vários apartamentos',
       predio_p:'A base é uma só, como um prédio. Cada empresa usa o seu espaço, com login próprio, e só acessa os próprios dados. A SatoTech cuida da estrutura e da manutenção.',
@@ -579,15 +630,16 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
       p3_h:'Desenvolvemos e demonstramos', p3_p:'Você vê a solução funcionando antes de ela entrar na sua rotina.',
       p4_h:'Implantamos e acompanhamos', p4_p:'Colocamos no ar, explicamos o uso para quem vai operar e seguimos acompanhando.',
       quem_tag:'Quem está por trás', quem_h2:'Minoru Sato, da SatoTech.',
-      quem_p1:'Quem conversa com você é a mesma pessoa que projeta e desenvolve a sua solução. Atendimento direto, sem call center e sem repassar seu projeto para terceiros.',
-      quem_p2:'Atendo empresas e empreendedores em todo o Japão, de forma online. A solução é pensada para a rotina real de quem atende, vende e opera ao mesmo tempo.',
+      quem_p1:'Quem conversa com você é a mesma pessoa que projeta e desenvolve a sua solução. Atendimento direto, sem repassar seu projeto para terceiros.',
+      quem_p2:'Atendo empresas e empreendedores de forma online. A solução é pensada para a rotina real de quem atende, vende e opera ao mesmo tempo.',
       cta_h2:'Qual parte do seu negócio poderia funcionar melhor?',
       cta_p:'Conte o que você precisa organizar, automatizar ou melhorar. Vamos avaliar uma solução para sua empresa.',
       cta_btn:'Conversar sobre meu projeto',
       foot_desc:'Soluções digitais para negócios em todo o Japão. Sites profissionais, sistemas de gestão e automação empresarial, com atendimento online.',
-      foot_nav:'Navegação', foot_contato:'Contato', foot_wa:'Conversar no WhatsApp', foot_area:'Atendimento online em todo o Japão',
+      foot_nav:'Navegação', foot_contato:'Contato', foot_wa:'Conversar no WhatsApp', foot_area:'Atendimento online',
       foot_copy:'© 2026 SatoTech. Todos os direitos reservados.', foot_slogan:'SatoTech, Soluções Inteligentes',
-      aria_abrir:'Abrir menu', aria_fechar:'Fechar menu', aria_tema_claro:'Mudar para o tema claro', aria_tema_escuro:'Mudar para o tema escuro', aria_idioma:'Mudar idioma', menu_tema:'Alternar tema claro/escuro', foot_insta:'@satotech.jp no Instagram'
+      aria_abrir:'Abrir menu', aria_fechar:'Fechar menu', aria_tema_claro:'Mudar para o tema claro', aria_tema_escuro:'Mudar para o tema escuro', aria_idioma:'Mudar idioma', menu_tema:'Alternar tema claro/escuro', foot_insta:'@satotech.jp no Instagram',
+      nav_faq:'Perguntas frequentes', foot_priv:'Política de Privacidade', cta_mail:'Prefere e-mail?', faq_tag:'Perguntas frequentes', faq_h2:'Antes de conversar com a gente', faq_q1:'Quanto custa?', faq_a1:'Depende do que a sua empresa precisa. Antes de começar, você recebe uma proposta com escopo, prazo e valores definidos. Nada é cobrado sem a sua aprovação.', faq_q2:'Quanto tempo leva?', faq_a2:'O prazo é definido na proposta, conforme o tamanho do projeto. Você acompanha cada etapa e vê a solução funcionando antes da implantação.', faq_q3:'O site é meu?', faq_a3:'Sim. O site, o domínio e o conteúdo são da sua empresa. A SatoTech desenvolve, implanta e cuida da parte técnica para você.', faq_q4:'Existe mensalidade?', faq_a4:'Os projetos têm um valor de implantação e um plano mensal de manutenção e acompanhamento, sempre definidos antes na proposta, sem surpresa.', faq_q5:'O suporte é em português?', faq_a5:'Sim. O atendimento é direto, em português, com a mesma pessoa que desenvolve a sua solução. E, quando necessário, também em japonês.', faq_q6:'Vocês emitem recibo?', faq_a6:'Sim. Você recebe contrato e recibo de cada pagamento, tudo registrado.'
     },
     jp: {
       nav_problema:'課題', nav_solucoes:'ソリューション', nav_conecta:'Conecta+',
@@ -614,7 +666,7 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
       c2_i1:'顧客情報と対応履歴', c2_i2:'段階ごとに整理されたお問い合わせ', c2_i3:'予約と日々のタスク',
       c3_h:'業務自動化', c3_p:'繰り返しの作業と二重入力を減らします。ツール同士の連携は、技術的に可能な場合にご提案します。',
       c3_i1:'必要な場面での自動通知と記録', c3_i2:'連携は案件ごとに確認', c3_i3:'テストなしに本番へは入れません',
-      con_tag:'テクノロジー', con_h2:'Conecta+',
+      con_tag:'テクノロジー', con_h2:'依頼管理パネル（Conecta+）',
       con_sub:'SatoTechの管理システムで使うプラットフォームです。サイトがお客様を受け付け、Conecta+がその後の流れを整理します。',
       predio_h:'ひとつの建物に、各社の部屋',
       predio_p:'土台はひとつで、建物のようなものです。各社は専用ログインで自分のスペースだけを使い、自社のデータだけにアクセスします。構造と保守はSatoTechが行います。',
@@ -626,15 +678,16 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
       p3_h:'開発し、デモで確認', p3_p:'業務で使う前に、実際に動くところをご確認いただきます。',
       p4_h:'導入とサポート', p4_p:'公開し、使う方へ操作方法を説明し、その後も伴走します。',
       quem_tag:'代表について', quem_h2:'Minoru Sato、SatoTech代表。',
-      quem_p1:'相談を受ける人と、設計と開発をする人は同じです。コールセンターはなく、あなたのプロジェクトを第三者に丸投げすることもありません。',
-      quem_p2:'日本全国の企業と起業家に、オンラインで対応しています。接客、販売、運営を一人で担う方の日常に合わせたソリューションを考えます。',
+      quem_p1:'相談を受ける人と、設計と開発をする人は同じです。あなたのプロジェクトを第三者に丸投げすることはありません。',
+      quem_p2:'企業と起業家に、オンラインで対応しています。接客、販売、運営を一人で担う方の日常に合わせたソリューションを考えます。',
       cta_h2:'あなたのビジネスの、どこを改善できますか。',
       cta_p:'整理したいこと、自動化したいこと、改善したいことを教えてください。あなたの会社に合う方法を一緒に検討します。',
       cta_btn:'プロジェクトについて相談する',
       foot_desc:'日本全国のビジネス向けデジタルソリューション。Webサイト制作から業務管理システム、業務自動化まで対応します。',
-      foot_nav:'メニュー', foot_contato:'お問い合わせ', foot_wa:'WhatsAppで相談する', foot_area:'日本全国オンライン対応',
+      foot_nav:'メニュー', foot_contato:'お問い合わせ', foot_wa:'WhatsAppで相談する', foot_area:'オンライン対応',
       foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech, Soluções Inteligentes',
-      aria_abrir:'メニューを開く', aria_fechar:'メニューを閉じる', aria_tema_claro:'ライトテーマに切り替える', aria_tema_escuro:'ダークテーマに切り替える', aria_idioma:'言語を切り替える', menu_tema:'テーマ（明/暗）を切り替える', foot_insta:'Instagramの@satotech.jp'
+      aria_abrir:'メニューを開く', aria_fechar:'メニューを閉じる', aria_tema_claro:'ライトテーマに切り替える', aria_tema_escuro:'ダークテーマに切り替える', aria_idioma:'言語を切り替える', menu_tema:'テーマ（明/暗）を切り替える', foot_insta:'Instagramの@satotech.jp',
+      nav_faq:'よくある質問', foot_priv:'プライバシーポリシー', cta_mail:'メールでのお問い合わせは', faq_tag:'よくある質問', faq_h2:'お問い合わせの前に', faq_q1:'費用はどれくらいですか？', faq_a1:'必要な内容によって異なります。開始前に、範囲・納期・金額を明記した提案書をお渡しします。承認のない請求はありません。', faq_q2:'期間はどれくらいですか？', faq_a2:'プロジェクトの規模に応じて、提案書で納期を定めます。各工程を確認でき、導入前に動作する形でご覧いただけます。', faq_q3:'サイトは自社のものになりますか？', faq_a3:'はい。サイト、ドメイン、コンテンツはすべて貴社のものです。SatoTechは開発と導入、技術面のサポートを担当します。', faq_q4:'月額費用はありますか？', faq_a4:'導入費用と、保守・運用サポートの月額プランがあります。いずれも提案書で事前に明示します。', faq_q5:'ポルトガル語で対応してもらえますか？', faq_a5:'はい。開発担当者が直接、ポルトガル語で対応します。必要に応じて日本語でも対応します。', faq_q6:'領収書は発行されますか？', faq_a6:'はい。契約書と、各お支払いの領収書をお渡しします。'
     }    ,
     en: {
       nav_problema:'The problem', nav_solucoes:'Our solutions', nav_conecta:'Conecta+',
@@ -661,7 +714,7 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
       c2_i1:'Customers and service history', c2_i2:'Requests organized by stage', c2_i3:'Bookings and routine tasks',
       c3_h:'Business automation', c3_p:'Less repetitive work and less duplicate typing, with integration between tools when technically feasible.',
       c3_i1:'Automatic notices and records where they make sense', c3_i2:'Integration assessed case by case', c3_i3:'Nothing goes live untested',
-      con_tag:'Technology', con_h2:'Conecta+',
+      con_tag:'Technology', con_h2:'Request panel (Conecta+)',
       con_sub:'It is the platform SatoTech uses in the management systems it builds. The website receives the customer. Conecta+ organizes what happens next.',
       predio_h:'One building, many apartments',
       predio_p:'There is a single base, like a building. Each company uses its own space, with its own login, and only accesses its own data. SatoTech takes care of the structure and the maintenance.',
@@ -673,15 +726,16 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
       p3_h:'We build it and show it working', p3_p:'You see the solution working before it becomes part of your routine.',
       p4_h:'We launch and stay with you', p4_p:'We put it live, explain how to use it to whoever will operate it, and keep following along.',
       quem_tag:'About the founder', quem_h2:'Minoru Sato, of SatoTech.',
-      quem_p1:'The person you talk to is the same person who designs and builds your solution. Direct contact, no call center and no handing your project off to third parties.',
-      quem_p2:'I work with companies and business owners across Japan, fully online. The solution is designed for the real routine of someone who serves, sells and operates at the same time.',
+      quem_p1:'The person you talk to is the same person who designs and builds your solution. Direct contact, and no handing your project off to third parties.',
+      quem_p2:'I work with companies and business owners, fully online. The solution is designed for the real routine of someone who serves, sells and operates at the same time.',
       cta_h2:'Which part of your business could work better?',
       cta_p:'Tell us what you need to organize, automate or improve. We will assess a solution for your company.',
       cta_btn:'Talk about my project',
       foot_desc:'Digital solutions for businesses across Japan. Website development, management systems and business automation.',
-      foot_nav:'Navigation', foot_contato:'Contact', foot_wa:'Chat on WhatsApp', foot_area:'Online service across Japan',
+      foot_nav:'Navigation', foot_contato:'Contact', foot_wa:'Chat on WhatsApp', foot_area:'Online service',
       foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech, Soluções Inteligentes',
-      aria_abrir:'Open menu', aria_fechar:'Close menu', aria_tema_claro:'Switch to light theme', aria_tema_escuro:'Switch to dark theme', aria_idioma:'Change language', menu_tema:'Toggle light/dark theme', foot_insta:'@satotech.jp on Instagram'
+      aria_abrir:'Open menu', aria_fechar:'Close menu', aria_tema_claro:'Switch to light theme', aria_tema_escuro:'Switch to dark theme', aria_idioma:'Change language', menu_tema:'Toggle light/dark theme', foot_insta:'@satotech.jp on Instagram',
+      nav_faq:'FAQ', foot_priv:'Privacy Policy', cta_mail:'Prefer email?', faq_tag:'FAQ', faq_h2:'Before you talk to us', faq_q1:'How much does it cost?', faq_a1:'It depends on what your business needs. Before anything starts, you receive a proposal with scope, timeline and prices defined. Nothing is charged without your approval.', faq_q2:'How long does it take?', faq_a2:'The timeline is set in the proposal, according to the size of the project. You follow each step and see the solution working before it goes live.', faq_q3:'Is the website mine?', faq_a3:'Yes. The website, the domain and the content belong to your company. SatoTech builds, launches and takes care of the technical side for you.', faq_q4:'Is there a monthly fee?', faq_a4:'Projects have a setup price and a monthly maintenance and support plan, always defined upfront in the proposal, with no surprises.', faq_q5:'Is support available in Portuguese?', faq_a5:'Yes. You talk directly, in Portuguese, with the same person who builds your solution. And in Japanese when needed.', faq_q6:'Do you issue receipts?', faq_a6:'Yes. You receive a contract and a receipt for every payment, all on record.'
     }
   };
   var ORDEM = ['pt','jp','en'];
@@ -720,6 +774,8 @@ html[data-tema="claro"] :focus-visible{outline-color:var(--verde-escuro)}
     var md = document.getElementById('metaDesc'); if (md) md.setAttribute('content', META[l].desc);
     var ot = document.getElementById('ogTitle'); if (ot) ot.setAttribute('content', META[l].ogt);
     var od = document.getElementById('ogDesc'); if (od) od.setAttribute('content', META[l].ogd);
+    var tt = document.getElementById('twTitle'); if (tt) tt.setAttribute('content', META[l].ogt);
+    var td = document.getElementById('twDesc'); if (td) td.setAttribute('content', META[l].ogd);
     if (typeof rotuloMenu === 'function') rotuloMenu();
     if (typeof aplicarTema === 'function') aplicarTema();
     document.querySelectorAll('.wa-link').forEach(function(a){
