@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var t=localStorage.getItem('satotech-tema');if(t==='claro')document.documentElement.setAttribute('data-tema','claro');}catch(e){}})();</script>
 <title>SatoTech | Soluções digitais para negócios em todo o Japão</title>
 <meta name="description" content="Soluções digitais para negócios em todo o Japão. Sites profissionais, sistemas de gestão e automação sob medida, com atendimento online em todo o Japão.">
 <meta name="theme-color" content="#0F1115">
@@ -198,6 +199,50 @@ a.wa-mobile{display:none}
   .topo-acoes a.wa-mobile{display:inline-block;padding:8px 10px;font-size:13px}
   .burger{width:38px;height:38px}
 }
+
+/* ---------- tema claro (variante complementar do kit) ---------- */
+.burger{color:var(--claro)}
+.tema-btn{display:inline-flex;align-items:center;justify-content:center;padding:8px 10px}
+.tema-btn svg{width:18px;height:18px;display:block}
+.tema-btn .ico-lua{display:none}
+html[data-tema="claro"] .tema-btn .ico-sol{display:none}
+html[data-tema="claro"] .tema-btn .ico-lua{display:block}
+.logo-so-claro{display:none}
+html[data-tema="claro"] .logo-so-claro{display:block}
+html[data-tema="claro"] .logo-so-escuro{display:none}
+html[data-tema="claro"]{
+  --grafite:#EDF0F3;
+  --painel:#FFFFFF;
+  --painel-2:#E7ECF0;
+  --borda:#D5DBE3;
+  --claro:#181C20;
+  --suave:#49525C;
+}
+html[data-tema="claro"] .topo{background:rgba(245,247,249,.94)}
+html[data-tema="claro"] .topo.rolado{box-shadow:0 10px 30px rgba(15,17,21,.12)}
+html[data-tema="claro"] .menu-mobile{background:rgba(245,247,249,.98)}
+html[data-tema="claro"] .secao-alt{background:#E2E8ED}
+html[data-tema="claro"] footer{background:#FFFFFF}
+html[data-tema="claro"] .hero-marca{border-color:#C4CFC9;box-shadow:0 24px 60px rgba(15,17,21,.14)}
+html[data-tema="claro"] .card:hover{box-shadow:0 14px 34px rgba(15,17,21,.12),0 0 0 1px rgba(0,166,81,.25),0 8px 26px rgba(0,166,81,.12)}
+html[data-tema="claro"] .btn-contorno{background:rgba(15,17,21,.03)}
+html[data-tema="claro"] .quem-card{background:#FFFFFF;border:1px solid #D5DBE3}
+html[data-tema="claro"] .etapas .passo-num{background:#FFFFFF}
+@media (max-width:560px){
+  .tema-btn{padding:6px 7px}
+  .tema-btn svg{width:16px;height:16px}
+}
+/* aperto do topo em telas estreitas (com botao de tema + rotulo longo de idioma) */
+@media (max-width:560px){
+  .topo-in{gap:6px}
+  .topo-acoes{gap:5px}
+  .logo-topo{height:23px}
+  .lang-btn{padding:6px 7px;font-size:12px}
+  .tema-btn{padding:6px 6px}
+  .tema-btn svg{width:15px;height:15px}
+  .topo-acoes a.wa-mobile{padding:8px 9px;font-size:12.5px}
+  .burger{width:34px;height:34px}
+}
 </style>
 </head>
 <body>
@@ -205,7 +250,8 @@ a.wa-mobile{display:none}
 <header class="topo">
   <div class="wrap topo-in">
     <a class="marca" href="#inicio" aria-label="SatoTech">
-      <img class="logo-topo" src="assets/logo-branco.svg" alt="SatoTech, Soluções Inteligentes" width="421" height="100">
+      <img class="logo-topo logo-so-escuro" src="assets/logo-branco.svg" alt="SatoTech, Soluções Inteligentes" width="421" height="100">
+      <img class="logo-topo logo-so-claro" src="assets/logo-principal.svg" alt="SatoTech, Soluções Inteligentes" width="421" height="100">
     </a>
     <nav class="menu" aria-label="Navegação principal">
       <a href="#problema" data-i18n="nav_problema">O problema</a>
@@ -215,11 +261,12 @@ a.wa-mobile{display:none}
       <a href="#quem" data-i18n="nav_quem">Quem está por trás</a>
     </nav>
     <div class="topo-acoes">
+      <button class="lang-btn tema-btn" id="temaBtn" type="button" aria-label="Mudar para o tema claro"><svg class="ico-sol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="ico-lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
       <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language / 言語切り替え">日本語</button>
       <a class="btn btn-verde btn-sm wa-link" href="https://wa.me/819064640042" target="_blank" rel="noopener" data-i18n="nav_cta">Conversar sobre meu projeto</a>
       <a class="btn btn-verde btn-sm wa-mobile wa-link" href="https://wa.me/819064640042" target="_blank" rel="noopener">WhatsApp</a>
       <button class="burger" id="burgerBtn" type="button" aria-expanded="false" aria-controls="menuMobile" aria-label="Abrir menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F5F7F9" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
       </button>
     </div>
   </div>
@@ -417,7 +464,8 @@ a.wa-mobile{display:none}
   <div class="wrap">
     <div class="rodape-in">
       <div>
-        <img class="logo-rodape" src="assets/logo-branco.svg" alt="SatoTech, Soluções Inteligentes" width="421" height="100">
+        <img class="logo-rodape logo-so-escuro" src="assets/logo-branco.svg" alt="SatoTech, Soluções Inteligentes" width="421" height="100">
+        <img class="logo-rodape logo-so-claro" src="assets/logo-principal.svg" alt="SatoTech, Soluções Inteligentes">
         <p class="rodape-desc" data-i18n="foot_desc">Soluções digitais para negócios em todo o Japão. Webサイト制作から業務管理システム、業務自動化まで対応します。</p>
       </div>
       <div class="rodape-col">
@@ -452,7 +500,11 @@ a.wa-mobile{display:none}
     jp: { geral:'こんにちは、佐藤さん。会社のプロジェクトについて相談したいです。',
           site:'こんにちは、佐藤さん。会社のプロフェッショナルなサイトを作りたいです。',
           gestao:'こんにちは、佐藤さん。管理システムで会社を整理したいです。',
-          automacao:'こんにちは、佐藤さん。業務を自動化したいです。' }
+          automacao:'こんにちは、佐藤さん。業務を自動化したいです。' },
+    en: { geral:'Hello, Minoru. I would like to discuss a project for my company.',
+          site:'Hello, Minoru. I want a professional website for my company.',
+          gestao:'Hello, Minoru. I need to organize my company with a management system.',
+          automacao:'Hello, Minoru. I want to automate my business processes.' }
   };
   var T = {
     pt: {
@@ -546,26 +598,103 @@ a.wa-mobile{display:none}
       foot_desc:'日本全国のビジネス向けデジタルソリューション。Webサイト制作から業務管理システム、業務自動化まで対応します。',
       foot_nav:'メニュー', foot_contato:'お問い合わせ', foot_wa:'WhatsAppで相談する', foot_area:'日本全国オンライン対応',
       foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech、ソリューションズ インテリジェンテス'
+    }    ,
+    en: {
+      nav_problema:'The problem', nav_solucoes:'Our solutions', nav_conecta:'Conecta+',
+      nav_como:'How we work', nav_quem:'Who is behind it', nav_cta:'Talk about my project', nav_contato:'Contact',
+      cta_site:'I want a professional website', cta_gestao:'I need to organize my business', cta_auto:'I want to automate my processes',
+      fl1_h:'Visitor', fl1_p:'Finds your company on the website', fl2_h:'Request', fl2_p:'Orders, books or asks through the website',
+      fl3_h:'Conecta+', fl3_p:'Receives and organizes it in the panel', fl4_h:'Organized follow-up', fl4_p:'Your team tracks each case by status',
+      fl_nota:'Illustrative flow of how the website and the system work together.',
+      hero_h1:'Your business deserves more than a pretty website.',
+      hero_q:'A customer finds your company, gets interested in your service and wants to get in touch. What happens next?',
+      hero_sub:'SatoTech builds websites and systems that make follow-up easier, organize requests and help you track every opportunity.',
+      hero_cta1:'See our solutions', hero_cta2:'Talk about my project',
+      hero_nota1:'Digital solutions for businesses across Japan.', hero_nota2:'Online service across Japan.',
+      prob_tag:'The problem', prob_h2:'Where work gets lost in the day to day',
+      prob_sub:'It is not a lack of customers. It is often what happens after they reach out.',
+      pr1_h:'Scattered follow-up', pr1_p:'A WhatsApp message, a phone call, a note on paper. With no single place to track it all, a request goes unanswered and the customer gives up.',
+      pr2_h:'Requests with no status', pr2_p:'You cannot tell from memory what has been answered, what is in progress and what is still pending. Checking everything takes time from the people who should be serving customers.',
+      pr3_h:'Weak digital presence', pr3_p:'Someone who looks up your company and cannot find your services, prices or a clear way to reach you moves on to the next one.',
+      serv_tag:'Our solutions', serv_h2:'What SatoTech builds',
+      serv_sub:'From building your website to organizing your operations, we develop tailored digital solutions, with online service across Japan.',
+      c1_h:'Professional websites', c1_p:'A clear digital presence: what your company does, who it is for and how to get in touch.',
+      c1_i1:'Showcases and service pages', c1_i2:'Fast pages on mobile', c1_i3:'Lead capture with a short path',
+      c2_h:'Management systems', c2_p:'Customers, requests, bookings and business processes in a single panel, with a status you can follow.',
+      c2_i1:'Customers and service history', c2_i2:'Requests organized by stage', c2_i3:'Bookings and routine tasks',
+      c3_h:'Business automation', c3_p:'Less repetitive work and less duplicate typing, with integration between tools when technically feasible.',
+      c3_i1:'Automatic notices and records where they make sense', c3_i2:'Integration assessed case by case', c3_i3:'Nothing goes live untested',
+      con_tag:'Technology', con_h2:'Conecta+',
+      con_sub:'It is the platform SatoTech uses in the management systems it builds. The website receives the customer. Conecta+ organizes what happens next.',
+      predio_h:'One building, many apartments',
+      predio_p:'There is a single base, like a building. Each company uses its own space, with its own login, and only accesses its own data. SatoTech takes care of the structure and the maintenance.',
+      painel_h:'Website and panel working together',
+      painel_p:'The customer orders, books or requests through the website. The request arrives in the company panel, with a status to follow through to completion.',
+      como_tag:'How we work', como_h2:'Four steps, no surprises',
+      p1_h:'We understand the business', p1_p:'A conversation about your routine, your customers and the points where work gets stuck today.',
+      p2_h:'We plan the solution', p2_p:'A proposal with scope, timeline and prices defined before we start.',
+      p3_h:'We build it and show it working', p3_p:'You see the solution working before it becomes part of your routine.',
+      p4_h:'We launch and stay with you', p4_p:'We put it live, explain how to use it to whoever will operate it, and keep following along.',
+      quem_tag:'Who is behind it', quem_h2:'Minoru Sato, of SatoTech.',
+      quem_p1:'The person you talk to is the same person who designs and builds your solution. Direct contact, no call center and no handing your project off to third parties.',
+      quem_p2:'I work with companies and business owners across Japan, fully online. The solution is designed for the real routine of someone who serves, sells and operates at the same time.',
+      cta_h2:'Which part of your business could work better?',
+      cta_p:'Tell us what you need to organize, automate or improve. We will assess a solution for your company.',
+      cta_btn:'Talk about my project',
+      foot_desc:'Digital solutions for businesses across Japan. Website development, management systems and business automation.',
+      foot_nav:'Navigation', foot_contato:'Contact', foot_wa:'Chat on WhatsApp', foot_area:'Online service across Japan',
+      foot_copy:'© 2026 SatoTech. All rights reserved.', foot_slogan:'SatoTech, Intelligent Solutions'
     }
+  };
+  var ORDEM = ['pt','jp','en'];
+  var ROTULO = { pt:'日本語', jp:'English', en:'Português' };
+  var LANGHTML = { pt:'pt-BR', jp:'ja', en:'en' };
+  var TITULOS = {
+    pt:'SatoTech | Soluções digitais para negócios em todo o Japão',
+    jp:'SatoTech | 日本全国のビジネス向けデジタルソリューション',
+    en:'SatoTech | Digital solutions for businesses across Japan'
   };
   var lang = 'pt';
   var btn = document.getElementById('langBtn');
   function aplicar(l){
     lang = l;
-    document.documentElement.lang = (l === 'jp') ? 'ja' : 'pt-BR';
+    try { localStorage.setItem('satotech-lang', l); } catch(e) {}
+    document.documentElement.lang = LANGHTML[l];
+    document.title = TITULOS[l];
     var dict = T[l];
     document.querySelectorAll('[data-i18n]').forEach(function(el){
       var k = el.getAttribute('data-i18n');
       if (dict[k]) el.textContent = dict[k];
     });
-    btn.textContent = (l === 'jp') ? 'Português' : '日本語';
+    btn.textContent = ROTULO[l];
     document.querySelectorAll('.wa-link').forEach(function(a){
       var chave = a.getAttribute('data-wa') || 'geral';
       a.href = WA + '?text=' + encodeURIComponent(MSG[l][chave] || MSG[l].geral);
     });
   }
-  btn.addEventListener('click', function(){ aplicar(lang === 'pt' ? 'jp' : 'pt'); });
-  aplicar('pt');
+  btn.addEventListener('click', function(){
+    aplicar(ORDEM[(ORDEM.indexOf(lang) + 1) % ORDEM.length]);
+  });
+  var salvo = 'pt';
+  try { salvo = localStorage.getItem('satotech-lang') || 'pt'; } catch(e) {}
+  aplicar(T[salvo] ? salvo : 'pt');
+
+  /* tema claro/escuro (variante do kit), com preferencia salva */
+  var temaBtn = document.getElementById('temaBtn');
+  var metaTema = document.querySelector('meta[name="theme-color"]');
+  function aplicarTema(){
+    var claro = document.documentElement.getAttribute('data-tema') === 'claro';
+    temaBtn.setAttribute('aria-label', claro ? 'Mudar para o tema escuro' : 'Mudar para o tema claro');
+    if (metaTema) metaTema.setAttribute('content', claro ? '#F5F7F9' : '#0F1115');
+  }
+  temaBtn.addEventListener('click', function(){
+    var claro = document.documentElement.getAttribute('data-tema') === 'claro';
+    if (claro) { document.documentElement.removeAttribute('data-tema'); }
+    else { document.documentElement.setAttribute('data-tema','claro'); }
+    try { localStorage.setItem('satotech-tema', claro ? 'escuro' : 'claro'); } catch(e) {}
+    aplicarTema();
+  });
+  aplicarTema();
 
   /* menu mobile */
   var burger = document.getElementById('burgerBtn');
